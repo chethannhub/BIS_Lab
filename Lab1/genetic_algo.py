@@ -40,7 +40,7 @@ def mutate(population, mutation_rate=0.1):
 def is_converged(population, prev_population):
     return sorted(population) == sorted(prev_population)
 
-def genetic_algorithm(pop_size=10, max_generations=100, num_parents=4, mutation_rate=0.1, patience=10):
+def genetic_algorithm(pop_size=10, max_generations=15, num_parents=4, mutation_rate=0.1, patience=10):
     population = initialize_population(pop_size)
     best = max(population, key=fitness)
     best_fitness = fitness(best)
